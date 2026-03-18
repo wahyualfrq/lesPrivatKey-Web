@@ -30,17 +30,18 @@ export default function Navbar() {
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 px-6 py-4 ${isScrolled ? 'bg-white/90 backdrop-blur-xl shadow-lg border-b border-primary-100 py-3' : 'bg-transparent py-5'}`}>
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         {/* Logo */}
-        <a href="#" className="flex items-center gap-3 group">
-          <div className="relative w-10 h-10 group-hover:scale-110 transition-transform">
+        <a href="#" className="flex items-center gap-2 md:gap-3 group">
+          <div className="relative w-12 h-12 md:w-10 md:h-10 group-hover:scale-110 transition-transform">
             <Image 
               src="/image/logoKey.png" 
               alt="Logo Sahabat Pintar Key" 
               fill
+              sizes="48px"
               className="object-contain"
             />
           </div>
-          <span className={`text-xl font-black tracking-tighter ${isScrolled ? 'text-slate-900' : 'text-slate-900'} drop-shadow-sm`}>
-            Sahabat <span className="text-primary-600 block sm:inline">Pintar Key</span>
+          <span className={`text-lg md:text-xl font-black tracking-tighter ${isScrolled ? 'text-slate-900' : 'text-slate-900'} drop-shadow-sm whitespace-nowrap`}>
+            Sahabat <span className="text-primary-600">Pintar Key</span>
           </span>
         </a>
 

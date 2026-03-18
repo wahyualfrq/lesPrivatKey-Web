@@ -44,9 +44,9 @@ const programs = [
 
 export default function Programs() {
   return (
-    <section id="program" className="bg-white py-24 px-6 overflow-hidden">
+    <section id="program" className="bg-white py-10 md:py-24 px-6 overflow-hidden">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16 px-4">
+        <div className="text-center mb-8 md:mb-16 px-4">
           <motion.div 
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
@@ -59,7 +59,7 @@ export default function Programs() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-3xl md:text-5xl font-black text-slate-900 mb-6 drop-shadow-sm"
+            className="text-[26px] md:text-5xl font-black text-slate-900 mb-4 md:mb-6 drop-shadow-sm"
           >
             Pilihan Program <span className="text-primary-600">Terbaik</span>
           </motion.h2>
@@ -67,49 +67,57 @@ export default function Programs() {
              initial={{ opacity: 0, y: 20 }}
              whileInView={{ opacity: 1, y: 0 }}
              viewport={{ once: true }}
-             className="text-slate-600 max-w-2xl mx-auto text-lg leading-relaxed font-medium"
+             className="text-slate-600 max-w-2xl mx-auto text-base md:text-lg leading-relaxed font-medium"
           >
             Setiap jenjang memiliki kurikulum yang diriset khusus sesuai tingkat perkembangan siswa untuk hasil belajar maksimal.
           </motion.p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-4 sm:px-0">
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-8 px-4 sm:px-0 relative z-10">
           {programs.map((p, idx) => (
             <motion.div
               key={idx}
-              initial={{ opacity: 0, y: 40 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: idx * 0.1, duration: 0.5 }}
-              className={`relative p-8 rounded-[2.5rem] bg-white border-2 ${p.color} hover:border-primary-300 hover:shadow-2xl hover:shadow-primary-100/50 transition-all duration-300 transform hover:-translate-y-2 flex flex-col h-full`}
+              transition={{ delay: idx * 0.05, duration: 0.5 }}
+              className={`relative p-4 md:p-8 rounded-[1.75rem] md:rounded-[2.5rem] bg-white border-2 ${p.color} hover:border-emerald-300 hover:shadow-2xl hover:shadow-emerald-100/50 transition-all duration-300 transform md:hover:-translate-y-2 flex flex-col h-full items-center md:items-start text-center md:text-left shadow-sm`}
             >
-              <div className={`w-14 h-14 ${p.iconBg} rounded-2xl flex items-center justify-center ${p.iconColor} mb-8 shadow-sm group-hover:scale-110 transition-transform`}>
-                <p.icon size={28} />
+              {/* Icon Container - Smaller on Mobile */}
+              <div className={`w-10 h-10 md:w-14 md:h-14 ${p.iconBg} rounded-xl md:rounded-2xl flex items-center justify-center ${p.iconColor} mb-4 md:mb-8 shadow-inner group-hover:scale-110 transition-transform`}>
+                <p.icon size={20} className="md:w-7 md:h-7" />
               </div>
               
-              <div className="mb-4">
-                <span className="text-[10px] font-black uppercase tracking-widest text-slate-400 block mb-1">{p.level}</span>
-                <h3 className="text-xl font-black text-slate-900 leading-tight">{p.title}</h3>
+              <div className="mb-3 md:mb-4">
+                <span className="text-[8px] md:text-[10px] font-black uppercase tracking-[0.15em] text-slate-400 block mb-1">{p.level}</span>
+                <h3 className="text-xs md:text-xl font-black text-slate-900 leading-tight h-auto md:h-[3rem] line-clamp-2">{p.title}</h3>
               </div>
 
-              <ul className="space-y-4 mb-8 flex-grow">
+              {/* List Items - Hidden on Mobile to save space */}
+              <ul className="hidden md:block space-y-4 mb-8 flex-grow">
                 {p.items.map((item, i) => (
                   <li key={i} className="flex items-start gap-2 text-sm text-slate-600 font-medium">
                     <div className="mt-1 flex-shrink-0">
-                        <Star size={14} className="text-primary-500 fill-primary-500" />
+                        <Star size={14} className="text-emerald-500 fill-emerald-500" />
                     </div>
                     {item}
                   </li>
                 ))}
               </ul>
 
+              {/* Micro feature for mobile complexity */}
+              <div className="flex md:hidden items-center gap-1 mb-3 text-[8px] font-black text-emerald-600/80 uppercase tracking-widest bg-emerald-50 px-2 py-0.5 rounded-full">
+                <Star size={8} fill="currentColor" />
+                <span>Terbaik</span>
+              </div>
+
               <a 
                 href={`https://wa.me/6285267703438?text=Halo Kak, saya berminat daftar program ${p.level}`} 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="w-full py-4 text-center rounded-2xl bg-slate-50 border border-slate-100 text-slate-900 font-black text-xs uppercase tracking-widest hover:bg-primary-600 hover:text-white hover:border-primary-600 transition-all active:scale-95"
+                className="w-full py-2.5 md:py-4 text-center rounded-xl md:rounded-2xl bg-slate-50 border border-slate-100 text-slate-900 font-black text-[9px] md:text-xs uppercase tracking-widest hover:bg-emerald-600 hover:text-white hover:border-emerald-600 transition-all active:scale-95 mt-auto"
               >
-                Cek Detail
+                Detail
               </a>
             </motion.div>
           ))}

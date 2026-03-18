@@ -5,7 +5,7 @@ import { MapPin, Navigation, Info } from 'lucide-react';
 
 export default function Area() {
   return (
-    <section id="area" className="bg-slate-50 py-24 px-6 overflow-hidden">
+    <section id="area" className="bg-slate-50 py-12 md:py-24 px-6 overflow-hidden">
       <div className="max-w-7xl mx-auto flex flex-col items-center gap-16 md:flex-row">
         {/* Contact Info */}
         <div className="flex-1 text-center md:text-left">
@@ -15,10 +15,10 @@ export default function Area() {
             viewport={{ once: true }}
             className="mb-10 space-y-6"
           >
-            <h2 className="text-3xl md:text-5xl font-black text-slate-900 leading-tight">
+            <h2 className="text-[26px] md:text-5xl font-black text-slate-900 leading-tight">
               Kunjungi Tempat <span className="text-primary-600 underline underline-offset-8 decoration-primary-200">Belajar</span> Kami
             </h2>
-            <p className="text-lg text-slate-600 leading-relaxed font-medium">
+            <p className="text-base md:text-lg text-slate-600 leading-relaxed font-medium">
               Lokasi strategis dan nyaman untuk mendukung proses belajar mengajar yang kondusif.
             </p>
           </motion.div>
@@ -30,7 +30,7 @@ export default function Area() {
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
           >
-            <div className="flex items-start gap-4 p-8 bg-white rounded-[2.5rem] shadow-xl border border-slate-100/50 hover:shadow-2xl transition-all group overflow-hidden relative">
+            <div className="flex items-start gap-4 p-6 md:p-8 bg-white rounded-[2rem] md:rounded-[2.5rem] shadow-xl border border-slate-100/50 hover:shadow-2xl transition-all group overflow-hidden relative">
               <div className="absolute top-0 right-0 w-32 h-32 bg-primary-100 rounded-bl-[5rem] -mr-8 -mt-8 opacity-20 -z-0"></div>
               
               <div className="bg-primary-100 p-4 rounded-2xl group-hover:bg-primary-600 group-hover:text-white transition-colors duration-300 z-10">
@@ -42,7 +42,7 @@ export default function Area() {
               </div>
             </div>
 
-            <div className="flex items-start gap-4 p-8 bg-white rounded-[2.5rem] shadow-xl border border-slate-100/50 hover:shadow-2xl transition-all group overflow-hidden relative">
+            <div className="flex items-start gap-4 p-6 md:p-8 bg-white rounded-[2rem] md:rounded-[2.5rem] shadow-xl border border-slate-100/50 hover:shadow-2xl transition-all group overflow-hidden relative">
               <div className="absolute top-0 right-0 w-32 h-32 bg-emerald-100 rounded-bl-[5rem] -mr-8 -mt-8 opacity-20 -z-0"></div>
               
               <div className="bg-emerald-100 p-4 rounded-2xl group-hover:bg-emerald-600 group-hover:text-white transition-colors duration-300 z-10">
@@ -65,7 +65,7 @@ export default function Area() {
           viewport={{ once: true }}
           className="flex-1 w-full relative"
         >
-          <div className="relative z-10 aspect-[16/10] sm:aspect-square rounded-[3rem] bg-slate-200 shadow-2xl overflow-hidden group border-8 border-white group-hover:shadow-[0_40px_100px_-20px_rgba(22,163,74,0.2)] transition-all">
+          <div className="relative z-10 aspect-[16/10] sm:aspect-square rounded-3xl bg-slate-200 shadow-2xl overflow-hidden group border-4 border-white group-hover:shadow-[0_40px_100px_-20px_rgba(22,163,74,0.2)] transition-all">
             <iframe 
               src="https://maps.google.com/maps?q=-3.525389,103.780417&t=&z=15&ie=UTF8&iwloc=&output=embed" 
               width="100%" 

@@ -25,20 +25,32 @@ export default function WhatsAppFloating() {
             initial={{ opacity: 0, scale: 0, y: 100 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0, y: 100 }}
-            className="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-2 group"
+            className="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-2 group transition-opacity"
         >
-          {/* Tooltip on hover */}
-          <span className="bg-white px-3 py-1.5 rounded-xl border border-slate-100 shadow-xl text-sm font-semibold text-slate-700 opacity-0 group-hover:opacity-100 transition-opacity mb-2">
-            Hubungi Kami Sekarang
-          </span>
-          <a
-            href={waLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-2xl hover:shadow-green-500/50 transition-all transform hover:scale-110 active:scale-95 flex items-center justify-center border-4 border-white/50"
-          >
-            <WhatsAppIcon size={32} />
-          </a>
+          {/* Pulsing Ripple Effect */}
+          <div className="relative">
+            <motion.div 
+                animate={{ scale: [1, 1.8], opacity: [0.6, 0] }}
+                transition={{ duration: 2, repeat: Infinity, ease: "easeOut" }}
+                className="absolute inset-0 rounded-full bg-emerald-400"
+            />
+            <motion.div 
+                animate={{ scale: [1, 1.4], opacity: [0.4, 0] }}
+                transition={{ duration: 2, repeat: Infinity, ease: "easeOut", delay: 0.5 }}
+                className="absolute inset-0 rounded-full bg-emerald-300"
+            />
+            
+            <motion.a
+                href={waLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                animate={{ scale: [1, 1.08, 1] }}
+                transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+                className="relative z-10 bg-emerald-500 text-white w-14 h-14 rounded-full shadow-[0_10px_30px_rgba(16,185,129,0.4)] hover:shadow-emerald-500/50 transition-all flex items-center justify-center border-2 border-white/80 active:scale-90"
+            >
+                <WhatsAppIcon size={26} className="fill-white drop-shadow-sm" />
+            </motion.a>
+          </div>
         </motion.div>
       )}
     </AnimatePresence>
