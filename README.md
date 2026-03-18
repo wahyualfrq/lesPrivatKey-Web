@@ -21,6 +21,7 @@ Sebuah landing page modern, responsif, dan performant untuk layanan **Les Privat
 - **Styling**: [Tailwind CSS](https://tailwindcss.com/)
 - **Animations**: [Framer Motion](https://www.framer.com/motion/)
 - **Icons**: [Lucide React](https://lucide.dev/)
+- **Utility**: [clsx](https://github.com/lukeed/clsx), [tailwind-merge](https://github.com/dcastil/tailwind-merge)
 - **Font**: [Inter](https://fonts.google.com/specimen/Inter)
 
 ## 📂 Struktur Proyek
