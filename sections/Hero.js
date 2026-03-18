@@ -49,7 +49,7 @@ const Hero = () => {
 
             {/* Mini Badge */}
             <div className="absolute top-3 left-3 backdrop-blur-md bg-white/60 border border-white/30 rounded-full px-3 py-1 text-[10px] font-semibold text-gray-700 shadow-sm">
-              10+ Tahun
+              Pengalaman 10+ Tahun
             </div>
           </div>
         </motion.div>
