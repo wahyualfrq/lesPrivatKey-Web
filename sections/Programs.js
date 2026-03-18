@@ -112,7 +112,7 @@ export default function Programs() {
               </div>
 
               <a 
-                href={`https://wa.me/6285267703438?text=Halo Kak, saya berminat daftar program ${p.level}`} 
+                href={`https://wa.me/6285267703438?text=Halo%20Bu%2C%20saya%20mau%20tanya%20untuk%20daftar%20les%20privat%20anak%20saya%20di%20jenjang%20${p.level}.%20Bisa%20dibantu%20info%20jadwal%20dan%20biayanya%3F`} 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="w-full py-2.5 md:py-4 text-center rounded-xl md:rounded-2xl bg-slate-50 border border-slate-100 text-slate-900 font-black text-[9px] md:text-xs uppercase tracking-widest hover:bg-emerald-600 hover:text-white hover:border-emerald-600 transition-all active:scale-95 mt-auto"

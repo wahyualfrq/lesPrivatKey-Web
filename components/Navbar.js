@@ -58,7 +58,7 @@ export default function Navbar() {
             </a>
           ))}
           <a 
-            href="https://wa.me/6285267703438" 
+            href="https://wa.me/6285267703438?text=Halo%20Bu%2C%20saya%20mau%20tanya%20untuk%20daftar%20les%20privat%20anak%20saya.%20Bisa%20dibantu%20info%20jadwal%20dan%20biayanya%3F" 
             target="_blank" 
             rel="noopener noreferrer" 
             className="bg-primary-600 text-white px-6 py-3 rounded-full font-black text-xs uppercase tracking-widest hover:bg-primary-700 transition-all shadow-xl shadow-primary-500/20 hover:scale-105 active:scale-95 flex items-center gap-2 group border-2 border-primary-600"
@@ -97,7 +97,7 @@ export default function Navbar() {
               </a>
             ))}
             <a 
-              href="https://wa.me/6285267703438" 
+              href="https://wa.me/6285267703438?text=Halo%20Bu%2C%20saya%20mau%20tanya%20untuk%20daftar%20les%20privat%20anak%20saya.%20Bisa%20dibantu%20info%20jadwal%20dan%20biayanya%3F" 
               className="w-full bg-primary-600 text-white py-5 rounded-3xl font-black uppercase tracking-widest text-center shadow-2xl shadow-primary-500/20 flex items-center justify-center gap-3 group"
               onClick={() => setMobileMenuOpen(false)}
             >

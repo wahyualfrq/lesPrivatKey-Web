@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { WhatsAppIcon } from './Icons';
 
 export default function WhatsAppFloating() {
-  const waLink = "https://wa.me/6285267703438";
+  const waLink = "https://wa.me/6285267703438?text=Halo%20Bu%2C%20saya%20mau%20tanya%20untuk%20daftar%20les%20privat%20anak%20saya.%20Bisa%20dibantu%20info%20jadwal%20dan%20biayanya%3F";
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {

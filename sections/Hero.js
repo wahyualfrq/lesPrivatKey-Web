@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import { Users, Clock, CheckCircle2 } from "lucide-react";
 
 const Hero = () => {
-  const waLink = "https://wa.me/6285267703438";
+  const waLink = "https://wa.me/6285267703438?text=Halo%20Bu%2C%20saya%20mau%20tanya%20untuk%20daftar%20les%20privat%20anak%20saya.%20Bisa%20dibantu%20info%20jadwal%20dan%20biayanya%3F";
 
   return (
     <section className="relative min-h-[95vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-emerald-50 via-white to-white pt-24 pb-14 px-5 sm:px-10">
