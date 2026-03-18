@@ -18,6 +18,13 @@ export const metadata = {
     title: 'Les Privat Ujanmas | Sahabat Pintar Key',
     description: 'Les privat SD SMP SMA di Ujanmas. Guru berpengalaman 10+ tahun. Daftar sekarang.',
     type: 'website',
+    images: [{ url: '/image/poster.jpeg' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Les Privat Ujanmas | Sahabat Pintar Key',
+    description: 'Les privat SD SMP SMA di Ujanmas. Guru berpengalaman 10+ tahun. Daftar sekarang.',
+    images: ['/image/poster.jpeg'],
   },
   icons: {
     icon: '/image/logoKey.png',
