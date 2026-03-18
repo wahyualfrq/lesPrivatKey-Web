@@ -88,9 +88,9 @@ export default function Programs() {
                 <p.icon size={20} className="md:w-7 md:h-7" />
               </div>
               
-              <div className="mb-3 md:mb-5">
-                <span className="text-[10px] md:text-xs font-black uppercase tracking-[0.15em] text-slate-900 block mb-2">{p.level}</span>
-                <h3 className="text-sm md:text-xl font-extrabold text-slate-800 leading-tight h-auto md:h-[3rem] line-clamp-2">{p.title}</h3>
+              <div className="mb-4 md:mb-6">
+                <span className="text-[11px] md:text-sm font-black uppercase tracking-[0.2em] text-slate-950 block mb-2">{p.level}</span>
+                <h3 className="text-sm md:text-lg font-bold text-slate-700 leading-tight h-auto md:h-[3rem] line-clamp-2">{p.title}</h3>
               </div>
 
               {/* List Items - Hidden on Mobile to save space */}

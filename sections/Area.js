@@ -67,7 +67,7 @@ export default function Area() {
         >
           <div className="relative z-10 aspect-[16/10] sm:aspect-square rounded-3xl bg-slate-200 shadow-2xl overflow-hidden group border-4 border-white group-hover:shadow-[0_40px_100px_-20px_rgba(22,163,74,0.2)] transition-all">
             <iframe 
-              src="https://maps.google.com/maps?q=-3.525389,103.780417&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+              src="https://maps.google.com/maps?q=-3.525583,103.780502&t=&z=17&ie=UTF8&iwloc=&output=embed" 
               width="100%" 
               height="100%" 
               style={{ border: 0 }} 

@@ -31,12 +31,6 @@ const features = [
     color: 'bg-teal-500',
   },
   {
-    title: 'Fokus Pembelajaran',
-    desc: 'Kurikulum disesuaikan dengan kebutuhan & target nilai masing-masing siswa.',
-    icon: Target,
-    color: 'bg-lime-600',
-  },
-  {
     title: 'Semua Jenjang Tersedia',
     desc: 'Program lengkap mulai dari Calistung TK hingga Matematika SMA.',
     icon: Layers,
@@ -67,7 +61,7 @@ export default function Features() {
           </motion.p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-8 relative z-10">
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8 relative z-10">
           {features.map((f, idx) => (
             <motion.div
               key={idx}
@@ -75,47 +69,41 @@ export default function Features() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.05 }}
-              className="group p-5 md:p-8 rounded-3xl md:rounded-[2.5rem] bg-white border border-slate-100 shadow-sm hover:shadow-xl hover:shadow-emerald-500/10 transition-all duration-300 transform md:hover:-translate-y-2 flex flex-col items-center md:items-start text-center md:text-left"
+              className="group relative p-5 md:p-10 rounded-[2.5rem] bg-white border border-slate-100 shadow-sm hover:shadow-2xl hover:shadow-emerald-500/10 transition-all duration-500 transform lg:hover:-translate-y-3 flex flex-col items-center lg:items-start text-center lg:text-left overflow-hidden"
             >
-              <div className={`w-10 h-10 md:w-14 md:h-14 ${f.color} rounded-xl md:rounded-2xl flex items-center justify-center text-white mb-4 md:mb-6 group-hover:scale-110 transition-transform shadow-lg shadow-emerald-500/10`}>
-                <f.icon size={20} className="md:w-7 md:h-7" />
+              {/* Decorative Background Accent */}
+              <div className={`absolute -top-10 -right-10 w-32 h-32 ${f.color} opacity-[0.03] rounded-full group-hover:scale-150 transition-transform duration-700 animate-pulse`}></div>
+              <div className={`absolute -bottom-10 -left-10 w-24 h-24 ${f.color} opacity-[0.02] rounded-full group-hover:scale-125 transition-transform duration-700`}></div>
+
+              {/* Number Badge (Desktop Only) */}
+              <div className="hidden lg:block absolute top-8 right-8 text-4xl font-black text-slate-50 opacity-[0.05] group-hover:opacity-10 transition-opacity">
+                0{idx + 1}
               </div>
-              <h3 className="text-sm md:text-xl font-black text-slate-900 mb-2 md:mb-3 leading-tight">{f.title}</h3>
-              <p className="hidden md:block text-slate-500 leading-relaxed text-sm font-medium">{f.desc}</p>
+
+              {/* Icon Container with Translucent Effect */}
+              <div className="relative mb-6 md:mb-8">
+                <div className={`absolute inset-0 ${f.color} blur-xl opacity-20 group-hover:opacity-40 transition-opacity`}></div>
+                <div className={`relative w-12 h-12 md:w-16 md:h-16 ${f.color} rounded-2xl flex items-center justify-center text-white shadow-lg shadow-emerald-500/10 group-hover:rotate-6 transition-transform`}>
+                  <f.icon size={28} className="md:w-8 md:h-8" />
+                </div>
+              </div>
+
+              <h3 className="text-sm md:text-xl font-black text-slate-900 mb-3 md:mb-4 leading-tight group-hover:text-emerald-700 transition-colors">{f.title}</h3>
+              <p className="hidden lg:block text-slate-500 leading-relaxed text-sm font-medium mb-6">{f.desc}</p>
               
               {/* Simplified micro-feature for mobile */}
-              <div className="flex md:hidden items-center gap-1 mt-auto pt-2">
+              <div className="flex md:hidden lg:hidden items-center gap-1 mt-auto pt-2">
                 <CheckCircle2 size={10} className="text-emerald-500" />
                 <span className="text-[8px] font-black uppercase tracking-widest text-emerald-600/60">Terpercaya</span>
               </div>
 
-              {/* Desktop only hover detail */}
-              <div className="hidden md:flex mt-6 items-center gap-2 text-primary-600 opacity-0 group-hover:opacity-100 transition-opacity">
-                <CheckCircle2 size={16} />
-                <span className="text-xs font-bold uppercase tracking-wider">Layanan Terjamin</span>
+              {/* Desktop Details */}
+              <div className="hidden lg:flex mt-auto items-center gap-2 py-1 px-3 bg-emerald-50 rounded-full text-emerald-600 opacity-0 group-hover:opacity-100 transition-all transform translate-y-2 group-hover:translate-y-0">
+                <CheckCircle2 size={14} />
+                <span className="text-[10px] font-black uppercase tracking-widest">Keunggulan Inti</span>
               </div>
             </motion.div>
           ))}
-          
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            className="p-5 md:p-8 rounded-3xl md:rounded-[2.5rem] bg-gradient-to-br from-emerald-600 to-emerald-800 text-white flex flex-col justify-center items-center text-center shadow-xl md:col-span-1 lg:col-span-1 border border-emerald-500/20"
-          >
-              <Sparkles size={32} className="md:w-12 md:h-12 mb-3 md:mb-4 text-emerald-300" />
-              <h3 className="text-sm md:text-2xl font-black mb-1 md:mb-2 leading-tight text-white">Mulai Belajar</h3>
-              <p className="hidden md:block text-emerald-100 text-sm mb-6 max-w-[200px] leading-snug">Dapatkan sesi percobaan dan konsultasi gratis.</p>
-              <p className="md:hidden text-emerald-100 text-[9px] mb-3 leading-tight">Sesi percobaan gratis.</p>
-              <a 
-                href="https://wa.me/6285267703438" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="w-full bg-white text-emerald-700 py-2.5 md:py-3 rounded-xl font-bold hover:bg-emerald-50 transition-colors shadow-lg active:scale-95 text-[10px] md:text-sm"
-              >
-                Hubungi Kami
-              </a>
-          </motion.div>
         </div>
       </div>
     </section>
