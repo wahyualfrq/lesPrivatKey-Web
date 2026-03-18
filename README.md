@@ -75,4 +75,3 @@ Untuk mengubah nomor WhatsApp tujuan, Anda dapat memperbarui link di komponen `W
 
 ---
 
-Dibuat dengan ❤️ oleh [Wahyu Alfaruq](https://github.com/wahyualfrq)
