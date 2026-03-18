@@ -14,6 +14,14 @@ export const metadata = {
   title: 'Les Privat Ujanmas | Sahabat Pintar Key',
   description: 'Les privat SD SMP SMA di Ujanmas. Guru berpengalaman 10+ tahun. Maksimal 4 siswa. Daftar sekarang.',
   keywords: 'les privat Ujanmas, les matematika SMA, les calistung, les privat prabumulih, les privat palembang',
+  authors: [{ name: 'Sahabat Pintar Key' }],
+  robots: {
+    index: true,
+    follow: true,
+  },
+  alternates: {
+    canonical: 'https://lesprivatkey.com',
+  },
   openGraph: {
     title: 'Les Privat Ujanmas | Sahabat Pintar Key',
     description: 'Les privat SD SMP SMA di Ujanmas. Guru berpengalaman 10+ tahun. Daftar sekarang.',
